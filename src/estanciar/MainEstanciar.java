@@ -1,4 +1,6 @@
-public class Main {
+package estanciar;
+
+public class MainEstanciar {
     public static void main(String[] args) {
         Calcular calcular = new Calcular();
 
