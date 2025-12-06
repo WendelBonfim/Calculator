@@ -7,7 +7,7 @@ public class MainInterface {
         Integer calcSoma = calcularImplement.soma("9","11");
         System.out.println("A soma e:" + calcSoma);
 
-        String subResult = calcularImplement.subtrair(10,9);
+        String subResult = calcularImplement.subtrair(14,9);
         System.out.println("A subtração e: " + subResult);
 
         String multResult = calcularImplement.multiplicacao(15.0,14.5);
