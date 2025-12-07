@@ -2,14 +2,16 @@ package estanciar;
 
 public class Calcular {
 
-
-
     public Integer soma(String somaNumUm, String somaNumDois){
-        Integer somaUmInt = Integer.parseInt(somaNumUm);
-        Integer somaDoisInt = Integer.parseInt(somaNumDois);
-        Integer result = somaUmInt + somaDoisInt;
+      boolean resultValid= validarNumerosSemLetra(somaNumUm,somaNumDois);
+        if (resultValid == true ){
+            Integer somaUmInt = Integer.parseInt(somaNumUm);
+            Integer somaDoisInt = Integer.parseInt(somaNumDois);
+            Integer result = somaUmInt + somaDoisInt;
+            return result;
+        }
 
-        return result;
+        return 0;
     }
 
     public String subtrair(Integer subNumeroUm, Integer subNumeroDois){
@@ -30,6 +32,11 @@ public class Calcular {
         return resultDiv;
     }
 
-
-
+    public boolean validarNumerosSemLetra(String somaNumUm, String somaNumDois){
+        boolean resultValid = somaNumUm.matches("\\d+") && somaNumDois.matches("\\d+");
+        if(resultValid == false){
+            throw new NumberFormatException("Não e um formato valido.");
+        }
+        return true;
+    }
 }
