@@ -4,7 +4,7 @@ public class MainEstanciar {
     public static void main(String[] args) {
         Calcular calcular = new Calcular();
 
-       Integer resultSoma = calcular.soma("2","2");
+       Integer resultSoma = calcular.soma("d","2");
 
         System.out.println("O resultado da soma e: " + resultSoma);
 
